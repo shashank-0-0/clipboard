@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".MainActivity">-->
+
+<!--    <TextView-->
+<!--      android:id="@+id/textView"-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:layout_marginTop="16dp"-->
+<!--      android:text="YOUR CONNECTIONS"-->
+<!--      android:textSize="20sp"-->
+<!--      android:paddingBottom="10dp"-->
+<!--      android:fontFamily="sans-serif-black"-->
+<!--      app:layout_constraintEnd_toEndOf="parent"-->
+<!--      app:layout_constraintHorizontal_bias="0.498"-->
+<!--      app:layout_constraintStart_toStartOf="parent"-->
+<!--      app:layout_constraintTop_toTopOf="parent" />-->
+
+
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--      android:id="@+id/floating_btn"-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:layout_marginEnd="28dp"-->
+<!--      android:layout_marginBottom="36dp"-->
+<!--      android:src="@drawable/ic_baseline_add_24"-->
+<!--      app:layout_constraintBottom_toBottomOf="parent"-->
+<!--      app:layout_constraintEnd_toEndOf="parent" />-->
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--      android:id="@+id/recycler_view"-->
+<!--      android:layout_width="match_parent"-->
+<!--      android:layout_height="match_parent"-->
+<!--      android:paddingTop="25dp"-->
+<!--      app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--      app:layout_constraintBottom_toBottomOf="parent"-->
+<!--      app:layout_constraintEnd_toEndOf="parent"-->
+<!--      app:layout_constraintStart_toStartOf="parent"-->
+<!--      app:layout_constraintTop_toBottomOf="@+id/textView"-->
+<!--      tools:listitem="@layout/text_row_item" />-->
+
+<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+<!--      android:id="@+id/floatingActionButton_join"-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:layout_marginEnd="28dp"-->
+<!--      android:layout_marginBottom="16dp"-->
+<!--      android:clickable="true"-->
+<!--      app:layout_constraintBottom_toTopOf="@+id/floating_btn"-->
+<!--      app:layout_constraintEnd_toEndOf="parent"-->
+<!--      app:srcCompat="@drawable/ic_baseline_person_search_24" />-->
+
+<!--</androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".MainActivity">
+
+    <TextView
+      android:id="@+id/textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:text="YOUR CONNECTIONS"
+      android:textSize="20sp"
+      android:paddingBottom="10dp"
+      android:fontFamily="sans-serif-black"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.498"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+      android:id="@+id/linearLayout"
+      android:layout_width="match_parent"
+      android:layout_height="250dp"
+      android:orientation="vertical"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textView">
+        <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/recycler_view"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          tools:listitem="@layout/text_row_item" />
+    </LinearLayout>
+
+    <TextView
+      android:id="@+id/active_textView"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      android:layout_marginTop="24dp"
+      android:fontFamily="sans-serif-black"
+      android:paddingBottom="10dp"
+      android:text="ACTIVE CONNECTION"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.497"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+    <LinearLayout
+      android:id="@+id/linear_layout_2"
+      android:layout_width="match_parent"
+      android:layout_height="45dp"
+      android:layout_marginTop="4dp"
+      android:background="@color/light_grey"
+      android:visibility="gone"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/active_textView">
+        <TextView
+          android:id="@+id/active_name_textView"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:paddingLeft="20dp"
+          android:text="DEFAULT"
+          android:textSize="20sp"
+          android:textStyle="bold"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toBottomOf="@+id/active_textView" />
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/floating_btn"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="28dp"
+      android:layout_marginBottom="36dp"
+      android:src="@drawable/ic_baseline_add_24"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+      android:id="@+id/floatingActionButton_join"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="28dp"
+      android:layout_marginBottom="16dp"
+      android:clickable="true"
+      app:layout_constraintBottom_toTopOf="@+id/floating_btn"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:srcCompat="@drawable/ic_baseline_person_search_24" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

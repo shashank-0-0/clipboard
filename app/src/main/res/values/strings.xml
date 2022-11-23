@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">clipboard</string>
+    <string-array name="flower_array">
+        <item>Lily</item>
+        <item>Poppy</item>
+        <item>Sunflower</item>
+        <item>Freesia</item>
+    </string-array>
+
+</resources>
